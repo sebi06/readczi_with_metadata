@@ -1,0 +1,3 @@
+# from readczi_with_metadata import threshold, image_arithmetic
+
+# add your tests here...

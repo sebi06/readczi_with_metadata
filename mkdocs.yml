@@ -1,0 +1,10 @@
+site_name: readczi_with_metadata
+site_description: Read CZI incl metadata
+site_author: Sebastian Rhode
+
+theme: readthedocs
+
+repo_url: https://github.com/sebi06/readczi_with_metadata
+
+pages:
+- Home: index.md
