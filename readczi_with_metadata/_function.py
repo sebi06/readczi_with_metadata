@@ -30,12 +30,17 @@ def napari_experimental_provide_function():
 
 # 1.  First example, a simple function that thresholds an image and creates a labels layer
 def threshold(data: "napari.types.ImageData", threshold: int) -> "napari.types.LabelsData":
-    """Threshold an image and return a mask."""
+    """
+    Threshold an image and return a mask.
+    """
+
     return (data > threshold).astype(int)
 
 
 def mythreshold(in_data: "napari.types.ImageData") -> "napari.types.LabelsData":
-
+    """
+    my first plugin
+    """
     # threshold image and run marker-based watershed
     thresh = threshold_triangle(in_data).astype(int)
     # lgdkjghkghkdgh
@@ -55,7 +60,9 @@ class Operation(Enum):
     divide = np.divide
 
 
-def image_arithmetic(
-        layerA: "napari.types.ImageData", operation: Operation, layerB: "napari.types.ImageData") -> "napari.types.LayerDataTuple":
-    """Adds, subtracts, multiplies, or divides two same-shaped image layers."""
+def image_arithmetic(layerA: "napari.types.ImageData", operation: Operation, layerB: "napari.types.ImageData") -> "napari.types.LayerDataTuple":
+    """
+    Adds, subtracts, multiplies, or divides two same-shaped image layers.
+    """
+
     return (operation.value(layerA, layerB), {"colormap": "turbo"})
