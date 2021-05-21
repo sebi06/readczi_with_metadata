@@ -38,6 +38,7 @@ def mythreshold(in_data: "napari.types.ImageData") -> "napari.types.LabelsData":
 
     # threshold image and run marker-based watershed
     thresh = threshold_triangle(in_data).astype(int)
+    # lgdkjghkghkdgh
     binary = in_data >= thresh
 
     return binary
